@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ocean Breeze Beach Resort | Direct Beachfront Stays</title>
+<meta name="description" content="Book direct at Ocean Breeze Beach Resort: beachfront rooms and villas, private beach access, pool and restaurant. Zero commission, best rates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { sand: '#FAF8F5', navy: '#0F2942', gold: '#D97706' },
+  fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] }
+}}};
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { background:#FAF8F5; color:#0F2942; padding-bottom:calc(5rem + env(safe-area-inset-bottom, 0px)); }
+  @media (min-width:768px){ body{ padding-bottom:0; } }
+  img { background:#E8E1D6; }
+  :focus-visible { outline:3px solid #D97706; outline-offset:2px; }
+  .field { width:100%; border:1px solid #E5DDD0; border-radius:.75rem; padding:.75rem .9rem; background:#fff; color:#0F2942; font-weight:500; }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-sand/90 backdrop-blur border-b border-navy/10">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="Main">
+    <a href="#top" class="flex items-center gap-2 font-extrabold text-lg tracking-tight">
+      <i data-lucide="waves" class="w-6 h-6 text-gold"></i> Ocean Breeze Resort
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-sm font-semibold">
+      <li><a class="hover:text-gold" href="#rooms">Rooms</a></li>
+      <li><a class="hover:text-gold" href="#amenities">Amenities</a></li>
+      <li><a class="hover:text-gold" href="#gallery">Gallery</a></li>
+      <li><a class="hover:text-gold" href="#location">Location</a></li>
+    </ul>
+    <a href="#book" class="bg-gold text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-amber-700 transition">Book Now</a>
+  </nav>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="relative">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80" alt="Turquoise sea meeting a white sand beach at sunrise" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/40 to-navy/80"></div>
+  <div class="relative max-w-6xl mx-auto px-5 pt-20 pb-28 md:pt-32 md:pb-40 text-white">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] tracking-tight max-w-3xl">Wake Up to the Sound of Waves — Direct Beachfront Stays</h1>
+    <p class="mt-6 text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed">Book directly with us for zero commission, the lowest rate we offer, and a reply from the resort team in minutes, not days.</p>
+    <a href="#rooms" class="inline-flex mt-8 items-center gap-2 font-semibold underline underline-offset-4 decoration-gold decoration-2">See rooms and rates <i data-lucide="arrow-down" class="w-4 h-4"></i></a>
+  </div>
+</section>
+
+<!-- QUICK BOOKING BAR -->
+<section id="book" class="relative -mt-16 md:-mt-20 px-5 scroll-mt-20">
+  <form id="quickForm" class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl shadow-navy/10 p-5 md:p-6 grid gap-4 md:grid-cols-4 md:items-end" novalidate>
+    <div>
+      <label for="checkin" class="block text-sm font-semibold mb-1.5">Check-in</label>
+      <input id="checkin" type="date" class="field" required>
+    </div>
+    <div>
+      <label for="checkout" class="block text-sm font-semibold mb-1.5">Check-out</label>
+      <input id="checkout" type="date" class="field" required>
+    </div>
+    <div>
+      <label for="guests" class="block text-sm font-semibold mb-1.5">Guests</label>
+      <select id="guests" class="field">
+        <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option>
+      </select>
+    </div>
+    <button type="submit" class="bg-gold text-white font-bold rounded-xl px-4 py-3.5 flex items-center justify-center gap-2 hover:bg-amber-700 transition">
+      <i data-lucide="message-circle" class="w-5 h-5"></i> Check Availability on WhatsApp
+    </button>
+    <p id="formError" class="md:col-span-4 text-sm font-semibold text-red-700 hidden" role="alert"></p>
+  </form>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms" class="max-w-6xl mx-auto px-5 py-20 md:py-28 scroll-mt-16">
+  <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Rooms and tariff</h2>
+  <p class="mt-3 text-navy/70 max-w-xl text-lg">Rates are per night for the room, inclusive of breakfast. Pick a room and message us to confirm your dates.</p>
+  <div class="mt-12 grid gap-8 md:grid-cols-3">
+
+    <article class="bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5 flex flex-col">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=75" alt="Bright double room with white linen and garden-facing window" class="h-56 w-full object-cover" loading="lazy">
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="text-xl font-bold">Deluxe Garden View Room</h3>
+        <p class="mt-1 text-navy/70">A calm room overlooking our palm gardens, two minutes from the sand.</p>
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="snowflake" class="w-4 h-4 text-gold"></i>AC</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="wifi" class="w-4 h-4 text-gold"></i>Wi-Fi</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="coffee" class="w-4 h-4 text-gold"></i>Breakfast Included</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="door-open" class="w-4 h-4 text-gold"></i>Balcony</li>
+        </ul>
+        <div class="mt-auto pt-6 flex items-end justify-between gap-3">
+          <p><span class="text-2xl font-extrabold">₹2,999</span><span class="text-navy/60 text-sm"> / night</span></p>
+          <button class="book-room bg-gold text-white font-bold px-5 py-2.5 rounded-full hover:bg-amber-700 transition" data-room="Deluxe Garden View Room">Book This Room</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5 flex flex-col">
+      <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=75" alt="Elegant room with a large bed and sea-facing windows" class="h-56 w-full object-cover" loading="lazy">
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="text-xl font-bold">Premium Sea-Facing Room</h3>
+        <p class="mt-1 text-navy/70">Step onto your balcony and watch the tide roll in from bed.</p>
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="snowflake" class="w-4 h-4 text-gold"></i>AC</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="wifi" class="w-4 h-4 text-gold"></i>Wi-Fi</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="coffee" class="w-4 h-4 text-gold"></i>Breakfast Included</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="door-open" class="w-4 h-4 text-gold"></i>Balcony</li>
+        </ul>
+        <div class="mt-auto pt-6 flex items-end justify-between gap-3">
+          <p><span class="text-2xl font-extrabold">₹4,499</span><span class="text-navy/60 text-sm"> / night</span></p>
+          <button class="book-room bg-gold text-white font-bold px-5 py-2.5 rounded-full hover:bg-amber-700 transition" data-room="Premium Sea-Facing Room">Book This Room</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="bg-white rounded-2xl overflow-hidden shadow-lg shadow-navy/5 flex flex-col">
+      <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=75" alt="Beachfront villa with private pool and sun loungers" class="h-56 w-full object-cover" loading="lazy">
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="text-xl font-bold">Luxury Beachfront Villa</h3>
+        <p class="mt-1 text-navy/70">Our finest address: a private villa a few steps from the shore.</p>
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm font-medium">
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="snowflake" class="w-4 h-4 text-gold"></i>AC</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="wifi" class="w-4 h-4 text-gold"></i>Wi-Fi</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="coffee" class="w-4 h-4 text-gold"></i>Breakfast Included</li>
+          <li class="flex items-center gap-1.5 bg-sand rounded-full px-3 py-1"><i data-lucide="door-open" class="w-4 h-4 text-gold"></i>Balcony</li>
+        </ul>
+        <div class="mt-auto pt-6 flex items-end justify-between gap-3">
+          <p><span class="text-2xl font-extrabold">₹6,999</span><span class="text-navy/60 text-sm"> / night</span></p>
+          <button class="book-room bg-gold text-white font-bold px-5 py-2.5 rounded-full hover:bg-amber-700 transition" data-room="Luxury Beachfront Villa">Book This Room</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities" class="bg-white py-20 md:py-28 scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Everything for an easy stay</h2>
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-sand rounded-2xl p-6"><i data-lucide="umbrella" class="w-8 h-8 text-gold"></i><h3 class="mt-4 text-lg font-bold">Private Beach Access</h3><p class="mt-1 text-navy/70">Walk straight onto a quiet stretch of sand reserved for our guests.</p></div>
+      <div class="bg-sand rounded-2xl p-6"><i data-lucide="waves-ladder" class="w-8 h-8 text-gold"></i><h3 class="mt-4 text-lg font-bold">Swimming Pool</h3><p class="mt-1 text-navy/70">A clean, open-air pool with loungers and shaded seating.</p></div>
+      <div class="bg-sand rounded-2xl p-6"><i data-lucide="utensils" class="w-8 h-8 text-gold"></i><h3 class="mt-4 text-lg font-bold">Multi-Cuisine Restaurant</h3><p class="mt-1 text-navy/70">Fresh seafood, North and South Indian dishes and kids' favourites.</p></div>
+      <div class="bg-sand rounded-2xl p-6"><i data-lucide="car" class="w-8 h-8 text-gold"></i><h3 class="mt-4 text-lg font-bold">Free Parking</h3><p class="mt-1 text-navy/70">Secure on-site parking for cars and tempo travellers at no charge.</p></div>
+      <div class="bg-sand rounded-2xl p-6"><i data-lucide="zap" class="w-8 h-8 text-gold"></i><h3 class="mt-4 text-lg font-bold">24/7 Power Backup</h3><p class="mt-1 text-navy/70">Lights, AC and Wi-Fi keep running through any outage.</p></div>
+      <div class="bg-sand rounded-2xl p-6"><i data-lucide="flame" class="w-8 h-8 text-gold"></i><h3 class="mt-4 text-lg font-bold">Bonfire &amp; BBQ</h3><p class="mt-1 text-navy/70">Evening bonfires and grills on the beach, arranged on request.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="max-w-6xl mx-auto px-5 py-20 md:py-28 scroll-mt-16">
+  <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Life at the resort</h2>
+  <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=70" alt="Resort pool framed by palm trees" class="rounded-2xl w-full h-48 md:h-64 object-cover md:col-span-2" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=70" alt="Empty tropical beach with clear water" class="rounded-2xl w-full h-48 md:h-64 object-cover" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=70" alt="Resort pool and building at golden hour" class="rounded-2xl w-full h-48 md:h-64 object-cover" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=70" alt="Plated dinner served at the resort restaurant" class="rounded-2xl w-full h-48 md:h-64 object-cover" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=70" alt="Beachfront resort seen from the water" class="rounded-2xl w-full h-48 md:h-64 object-cover col-span-2 md:col-span-1" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=70" alt="Resort exterior with lit-up facade at dusk" class="rounded-2xl w-full h-48 md:h-64 object-cover col-span-2" loading="lazy">
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="bg-navy text-white py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">What our guests say</h2>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <figure class="bg-white/10 rounded-2xl p-6">
+        <div class="flex gap-1 text-gold" aria-label="5 out of 5 stars"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+        <blockquote class="mt-4 leading-relaxed text-white/90">We booked the sea-facing room for our anniversary. The sunrise from the balcony was unreal, and the staff surprised us with a bonfire dinner on the beach.</blockquote>
+        <figcaption class="mt-5 font-bold">Ananya &amp; Rohan Mehta<span class="block text-sm font-normal text-white/60">Couple, Pune</span></figcaption>
+      </figure>
+      <figure class="bg-white/10 rounded-2xl p-6">
+        <div class="flex gap-1 text-gold" aria-label="5 out of 5 stars"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+        <blockquote class="mt-4 leading-relaxed text-white/90">Travelling with two kids and my parents can be stressful, but the villa gave everyone space. The pool was spotless and the restaurant cooked mild dishes for the children without being asked.</blockquote>
+        <figcaption class="mt-5 font-bold">The Nair Family<span class="block text-sm font-normal text-white/60">Family of five, Bengaluru</span></figcaption>
+      </figure>
+      <figure class="bg-white/10 rounded-2xl p-6">
+        <div class="flex gap-1 text-gold" aria-label="5 out of 5 stars"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+        <blockquote class="mt-4 leading-relaxed text-white/90">Booking on WhatsApp took two minutes and the price was lower than every travel site. Power cut one evening and we never noticed. We are already planning our next trip.</blockquote>
+        <figcaption class="mt-5 font-bold">Priya &amp; Karan Shah<span class="block text-sm font-normal text-white/60">Couple, Mumbai</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" class="max-w-6xl mx-auto px-5 py-20 md:py-28 scroll-mt-16">
+  <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Find us on the shore</h2>
+  <div class="mt-10 grid gap-8 lg:grid-cols-5">
+    <div class="lg:col-span-2 space-y-6">
+      <div class="flex gap-4"><i data-lucide="map-pin" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+        <address class="not-italic leading-relaxed">Ocean Breeze Beach Resort<br>Beach Road, Candolim<br>Goa 403515, India</address></div>
+      <div class="flex gap-4"><i data-lucide="phone" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+        <a href="tel:+919932424383" class="font-semibold hover:text-gold">+91 99324 24383</a></div>
+      <div class="flex gap-4"><i data-lucide="clock" class="w-6 h-6 text-gold shrink-0 mt-1"></i>
+        <p>Check-in from 1:00 PM<br>Check-out by 11:00 AM</p></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Candolim+Beach+Goa" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-navy text-white font-bold rounded-full px-6 py-3 hover:bg-navy/90">Get directions <i data-lucide="navigation" class="w-4 h-4"></i></a>
+    </div>
+    <div class="lg:col-span-3 rounded-2xl overflow-hidden shadow-lg shadow-navy/10 bg-white">
+      <iframe title="Map showing the resort location on Candolim Beach, Goa" src="https://www.google.com/maps?q=Candolim+Beach+Goa&output=embed" class="w-full h-80 md:h-[420px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-navy text-white/80">
+  <div class="max-w-6xl mx-auto px-5 py-12 grid gap-8 md:grid-cols-3">
+    <div>
+      <p class="flex items-center gap-2 text-white font-extrabold text-lg"><i data-lucide="waves" class="w-6 h-6 text-gold"></i> Ocean Breeze Resort</p>
+      <p class="mt-3 text-sm leading-relaxed">Direct beachfront stays with no middlemen and no booking fees.</p>
+    </div>
+    <ul class="space-y-2 text-sm font-medium">
+      <li><a class="hover:text-white" href="#rooms">Rooms</a></li>
+      <li><a class="hover:text-white" href="#amenities">Amenities</a></li>
+      <li><a class="hover:text-white" href="#gallery">Gallery</a></li>
+      <li><a class="hover:text-white" href="#location">Location</a></li>
+    </ul>
+    <div class="text-sm space-y-2">
+      <p><a class="hover:text-white" href="tel:+919932424383">+91 99324 24383</a></p>
+      <p>Beach Road, Candolim, Goa 403515</p>
+    </div>
+  </div>
+  <p class="border-t border-white/10 text-center text-xs py-5">© <span id="year">2026</span> Ocean Breeze Beach Resort. All rights reserved.</p>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-navy/10 shadow-[0_-4px_20px_rgba(15,41,66,.12)] p-3 pb-[max(.75rem,env(safe-area-inset-bottom))] grid grid-cols-[1fr_1.45fr] gap-2.5">
+  <a href="tel:+919932424383" class="flex items-center justify-center gap-1.5 border-2 border-navy text-navy font-bold text-[15px] leading-none whitespace-nowrap rounded-xl h-12 px-2"><i data-lucide="phone" class="w-[18px] h-[18px] shrink-0"></i><span>Call Now</span></a>
+  <a href="#" id="stickyWa" class="flex items-center justify-center gap-1.5 bg-gold text-white font-bold text-[15px] leading-none whitespace-nowrap rounded-xl h-12 px-2"><i data-lucide="message-circle" class="w-[18px] h-[18px] shrink-0"></i><span>Book on WhatsApp</span></a>
+</div>
+
+<script>
+(function () {
+  var WA = '919932424383';
+  var $ = function (id) { return document.getElementById(id); };
+  var checkin = $('checkin'), checkout = $('checkout'), guests = $('guests'), err = $('formError');
+
+  function iso(d) { var m = d.getMonth() + 1, day = d.getDate(); return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day; }
+  function pretty(v) {
+    if (!v) return '';
+    var p = v.split('-');
+    return new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  var today = new Date(), tomorrow = new Date(); tomorrow.setDate(today.getDate() + 1);
+  checkin.min = iso(today);
+  checkout.min = iso(tomorrow);
+  $('year').textContent = today.getFullYear();
+
+  checkin.addEventListener('change', function () {
+    if (!checkin.value) return;
+    var p = checkin.value.split('-'), next = new Date(+p[0], +p[1] - 1, +p[2] + 1);
+    checkout.min = iso(next);
+    if (checkout.value && checkout.value <= checkin.value) checkout.value = iso(next);
+  });
+
+  function showError(msg) { err.textContent = msg; err.classList.remove('hidden'); }
+  function clearError() { err.textContent = ''; err.classList.add('hidden'); }
+
+  function openWhatsApp(room, requireDates) {
+    var ci = checkin.value, co = checkout.value;
+    if (requireDates || ci || co) {
+      if (!ci || !co) { showError('Please choose both check-in and check-out dates.'); $('book').scrollIntoView({ behavior: 'smooth' }); (ci ? checkout : checkin).focus(); return; }
+      if (co <= ci) { showError('Check-out must be after check-in.'); $('book').scrollIntoView({ behavior: 'smooth' }); checkout.focus(); return; }
+    }
+    clearError();
+    var n = guests.value, g = n + (n === '1' ? ' guest' : ' guests');
+    var what = room || 'a room';
+    var msg = 'Hi Ocean Breeze Resort, I want to book ' + what +
+      (ci && co ? ' from ' + pretty(ci) + ' to ' + pretty(co) : '') +
+      ' for ' + g + '. Please share availability.';
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  }
+
+  $('quickForm').addEventListener('submit', function (e) { e.preventDefault(); openWhatsApp(null, true); });
+
+  document.querySelectorAll('.book-room').forEach(function (btn) {
+    btn.addEventListener('click', function () { openWhatsApp(btn.dataset.room, false); });
+  });
+
+  $('stickyWa').addEventListener('click', function (e) { e.preventDefault(); openWhatsApp(null, false); });
+
+  // image fallback: show a clean branded placeholder instead of an empty gap
+  var PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">' +
+    '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B4363"/><stop offset="1" stop-color="#0F2942"/></linearGradient></defs>' +
+    '<rect width="800" height="600" fill="url(#g)"/>' +
+    '<g fill="none" stroke="#D97706" stroke-width="10" stroke-linecap="round">' +
+    '<path d="M330 250q17-18 35 0t35 0 35 0 35 0"/><path d="M330 290q17-18 35 0t35 0 35 0 35 0"/><path d="M330 330q17-18 35 0t35 0 35 0 35 0"/></g>' +
+    '<text x="400" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="30" font-weight="700" fill="#FAF8F5">Ocean Breeze Resort</text></svg>');
+
+  function useFallback(img) {
+    if (img.dataset.fallback) return; // only once, avoids an error loop
+    img.dataset.fallback = '1';
+    img.removeAttribute('srcset');
+    img.src = PLACEHOLDER;
+  }
+  document.querySelectorAll('img').forEach(function (img) {
+    img.addEventListener('error', function () { useFallback(img); });
+    // catch images that already failed before this script ran
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) useFallback(img);
+  });
+
+  if (window.lucide) lucide.createIcons();
+})();
+</script>
+</body>
+</html>
